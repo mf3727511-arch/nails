@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Membresía Nail Studio - Flayers, tendencias y contenido diario para tus redes sociales.">
+  <title>Membresía Nail Studio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffe4ec, #ffd6e8);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    /* Galería */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .galeria div {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal para ver imágenes grandes */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal:target {
+      display: flex;
+    }
+
+    /* Botones */
+    .boton {
+      display: inline-block;
+      background: #d63384;
+      color: white;
+      font-weight: bold;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .boton:hover {
+      background: #a32264;
+    }
+
+    .boton-verde {
+      background: #28a745;
+    }
+
+    .boton-verde:hover {
+      background: #1e7e34;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      background: #f8f8f8;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1 contenteditable="true">💅 Membresía Nail Studio</h1>
+    <p contenteditable="true">Todo el contenido que necesitás para tus redes, en un solo lugar ✨</p>
+  </header>
+
+  <!-- Beneficios -->
+  <section>
+    <h2 contenteditable="true">Beneficios de tu membresía</h2>
+    <ul contenteditable="true">
+      <li>📲 Flayers listos para publicar en WhatsApp e Instagram.</li>
+      <li>💅 Tendencias en uñas actualizadas.</li>
+      <li>📆 Contenido diario, listo para publicar.</li>
+    </ul>
+  </section>
+
+  <!-- Galería -->
+  <section>
+    <h2 contenteditable="true">Ejemplos de lo que recibirás</h2>
+    <div class="galeria" id="galeria">
+      <div>
+        <a href="#img1"><img src="ejemplo1.jpg" alt="Flayer"></a>
+        <p>Flayer para historias</p>
+      </div>
+      <div>
+        <a href="#img2"><img src="ejemplo2.jpg" alt="Flayer"></a>
+        <p>Flayer para promociones</p>
+      </div>
+      <div>
+        <a href="#img3"><img src="ejemplo3.jpg" alt="Flayer"></a>
+        <p>Flayer para redes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precio -->
+  <section>
+    <h2 contenteditable="true">🔥 Precio exclusivo</h2>
+    <p style="font-size: 28px; font-weight: bold; color: #d63384;" contenteditable="true">Solo $7.000 por mes</p>
+    <p contenteditable="true">Accedé al grupo y dejá de preocuparte por crear contenido.<br>
+      ¡Yo te envío todo listo para publicar ❤️‍🔥📲!</p>
+  </section>
+
+  <!-- Datos de Pago -->
+  <section>
+    <h2>💳 Datos para Transferencia</h2>
+    <p class="text-lg text-center mb-4">Podés realizar tu pago mensual a la siguiente cuenta:</p>
+    <div style="background:#ffe4ec; border-radius:10px; padding:15px; text-align:center;">
+      <p><b>Banco:</b> Astro Pay</p>
+      <p><b>Alias:</b> Nailsttudio</p>
+      <p><b>CBU:</b> 0000184305010021727247</p>
+      <p><b>Titular:</b> Martin Gabriel Flores</p>
+    </div>
+  </section>
+
+  <!-- Botones -->
+  <div style="text-align:center; margin:20px;">
+    <a href="https://chat.whatsapp.com/FyUQwjUpLNU2p2bm28YVV9?mode=ems_wa_t" target="_blank" class="boton">🔗 Unirme ahora</a>
+    <a href="https://wa.me/543777300479" target="_blank" class="boton boton-verde">💬 Hablar por WhatsApp</a>
+  </div>
+
+  <!-- Footer -->
+  <footer contenteditable="true">
+    © 2025 Nail Studio - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>
+
